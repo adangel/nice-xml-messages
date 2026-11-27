@@ -38,6 +38,7 @@
     </developers>
 
     <properties>
+        <project.build.outputTimestamp>2022-07-11T10:53:00+00:00</project.build.outputTimestamp>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <maven.compiler.release>8</maven.compiler.release>
@@ -218,6 +219,11 @@
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.3.1</version>
+                <configuration>
+                    <pushChanges>false</pushChanges>
+                    <localCheckout>true</localCheckout>
+                    <tagNameFormat>v@{project.version}</tagNameFormat>
+                </configuration>
             </plugin>
         </plugins>
     </build>
