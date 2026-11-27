@@ -202,9 +202,6 @@
                 </executions>
                 <configuration>
                     <quiet>true</quiet>
-                    <links>
-                        <link>https://docs.oracle.com/javase/8/docs/api/</link>
-                    </links>
                     <additionalJOption>-Xdoclint:none</additionalJOption>
                     <!-- <additionalJOption>-html5</additionalJOption>-->
                 </configuration>
