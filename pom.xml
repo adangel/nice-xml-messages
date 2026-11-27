@@ -40,7 +40,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <java.version>8</java.version>
+        <maven.compiler.release>8</maven.compiler.release>
         <kotlin.version>1.6.0</kotlin.version>
         <kotlin.jvmTarget>1.8</kotlin.jvmTarget>
     </properties>
@@ -158,17 +158,13 @@
 
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.0</version>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
+                <version>3.16.0</version>
             </plugin>
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>build-helper-maven-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.8.0</version>
                 <executions>
                     <execution>
                         <id>add-kotlin-test-sources</id>
@@ -186,7 +182,7 @@
 
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.1</version>
+                <version>3.6.1</version>
                 <configuration>
                     <!-- XML error messages are localized -->
                     <argLine>-Duser.language=en -Duser.region=GB</argLine>
@@ -195,7 +191,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.4.0</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -208,7 +204,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
+                <version>3.12.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -221,22 +217,21 @@
                     <links>
                         <link>https://docs.oracle.com/javase/8/docs/api/</link>
                     </links>
-                    <source>${java.version}</source>
                     <additionalJOption>-Xdoclint:none</additionalJOption>
                     <!-- <additionalJOption>-html5</additionalJOption>-->
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.2</version>
+                <version>3.5.1</version>
             </plugin>
             <plugin>
                 <artifactId>maven-install-plugin</artifactId>
-                <version>2.5.2</version>
+                <version>3.2.0</version>
             </plugin>
 <!--            <plugin>-->
 <!--                <artifactId>maven-release-plugin</artifactId>-->
-<!--                <version>2.5.3</version>-->
+<!--                <version>3.3.1</version>-->
 <!--            </plugin>-->
 
         </plugins>
@@ -260,7 +255,7 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.0.1</version>
+                        <version>3.2.8</version>
                         <executions>
                             <execution>
                                 <id>sign-artifacts</id>
