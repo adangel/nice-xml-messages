@@ -41,8 +41,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <maven.compiler.release>8</maven.compiler.release>
-        <kotlin.version>1.6.0</kotlin.version>
-        <kotlin.jvmTarget>1.8</kotlin.jvmTarget>
+        <kotlin.version>2.2.10</kotlin.version>
     </properties>
 
 
@@ -109,7 +108,7 @@
 
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test-junit</artifactId>
+            <artifactId>kotlin-test-junit5</artifactId>
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
